@@ -24,7 +24,6 @@ public class CounterView extends SView<CounterModel> {
         if (counterPanel == null)
             counterPanel = new CounterPanel(getModel().getCurrentCounterValue());
         return counterPanel;
-
     }
 
     @Override

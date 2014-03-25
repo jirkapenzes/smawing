@@ -14,7 +14,7 @@ public abstract class SView<TModel extends SModel> implements Observer {
     private final TModel model;
     private JComponent contentPane;
 
-    public SView(SFrame frame, Class<TModel> modelClassName) {
+    protected SView(SFrame frame, Class<TModel> modelClassName) {
         this.frame = frame;
         this.model = getMainFrame().getModel(modelClassName);
         model.addObserver(this);
@@ -26,7 +26,7 @@ public abstract class SView<TModel extends SModel> implements Observer {
         return frame;
     }
 
-    public TModel getModel() {
+    protected TModel getModel() {
         return model;
     }
 
@@ -40,5 +40,5 @@ public abstract class SView<TModel extends SModel> implements Observer {
         updateView();
     }
 
-    public abstract void updateView();
+    protected abstract void updateView();
 }

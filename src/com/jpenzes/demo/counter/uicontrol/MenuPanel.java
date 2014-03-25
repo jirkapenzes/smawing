@@ -10,7 +10,7 @@ import java.awt.*;
 public class MenuPanel extends JPanel {
 
     private final JButton incrementButton;
-    private JButton decrementButton;
+    private final JButton decrementButton;
 
     public MenuPanel(String incrementButtonText, String decrementButtonText) {
         incrementButton = new JButton(incrementButtonText);

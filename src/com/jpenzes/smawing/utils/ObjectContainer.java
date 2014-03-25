@@ -23,6 +23,7 @@ public class ObjectContainer<Identifier, TClass> implements IObjectContainer<Ide
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public <TClass> TClass get(Identifier identifier) {
         return (TClass) objectsMap.get(identifier);
     }

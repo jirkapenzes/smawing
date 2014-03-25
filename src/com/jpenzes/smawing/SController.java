@@ -10,7 +10,7 @@ public abstract class SController<TView extends SView<? extends SModel>, TModel 
     private final TModel model;
     private final TView view;
 
-    public SController(SFrame frame, Class<TView> view, Class<TModel> model) {
+    protected SController(SFrame frame, Class<TView> view, Class<TModel> model) {
         this.frame = frame;
         this.model = getMainFrame().getModel(model);
         this.view = getMainFrame().getView(view);
@@ -22,11 +22,11 @@ public abstract class SController<TView extends SView<? extends SModel>, TModel 
         return frame;
     }
 
-    public TModel getModel() {
+    protected TModel getModel() {
         return model;
     }
 
-    public TView getView() {
+    protected TView getView() {
         return view;
     }
 }

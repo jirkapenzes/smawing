@@ -19,11 +19,11 @@ public abstract class SFrame {
     private final IObjectContainer<Class, SModel> models;
     private final IFrameFactory frameFactory;
 
-    public SFrame() {
+    protected SFrame() {
         this(new SDefaultFrameFactory());
     }
 
-    public SFrame(IFrameFactory frameFactory) {
+    protected SFrame(IFrameFactory frameFactory) {
         this.frameFactory = frameFactory;
         this.models = new ObjectContainer<Class, SModel>();
         this.views = new ObjectContainer<Class, SView<? extends SModel>>();
@@ -63,7 +63,7 @@ public abstract class SFrame {
         return frame;
     }
 
-    public IFrameFactory getFrameFactory() {
+    protected IFrameFactory getFrameFactory() {
         return frameFactory;
     }
 

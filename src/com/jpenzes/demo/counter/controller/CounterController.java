@@ -24,7 +24,6 @@ public class CounterController extends SController<CounterView, CounterModel> {
         addCounterValue(+1);
     }
 
-
     public void decrementCounterValue() {
         addCounterValue(-1);
     }

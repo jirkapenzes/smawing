@@ -9,7 +9,7 @@ import java.awt.*;
  */
 public class CounterPanel extends JPanel {
 
-    private JLabel counterValueLabel;
+    private final JLabel counterValueLabel;
 
     public CounterPanel(int initializeValue) {
         counterValueLabel = new JLabel(Integer.toString(initializeValue));
